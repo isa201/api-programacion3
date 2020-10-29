@@ -139,7 +139,7 @@ router.get("/api/tareas/consultar", async (request, response) => {
       {descripcion:{$regex:regExpTerm}}
     ];
     const tareas=await Tarea.find({'$or':regExprSearch});
-    response.send(tareas);
+    response.send(tare);
   } catch (error) {
     console.error(error);
     response.status(500).send({ mensaje: "Error desconocido" });
